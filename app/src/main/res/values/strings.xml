@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyPincode</string>
+    <string name="_1">1</string>
+    <string name="_7">7</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_6">6</string>
+    <string name="_5">5</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_0">0</string>
+    <string name="_enter_pin">Please enter a 5-digit pincode\n</string>
+    <string name="_pin_not_match">Your pincode does not match.\n Please try again</string>
+    <string name="_pin_incorrect">Your pincode is not correct.\n Please try again</string>
+    <string name="_empty">\n</string>
+    <string name="_pin_confirm">Please confirm your pincode\n</string>
+    <string name="_no_pin_yet">You do not have a pincode yet.\n Please enter your 5-digit pincode</string>
+</resources>

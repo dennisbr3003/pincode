@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+define the button like this so the colors will not be overridden
+by any theme:
+
+(this particular instance was used in a constraint layout)
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/_start"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+It's not a <button/> but a <androidx.appcompat.widget.AppCompatButton/>
+
+Dashed line around the button can be done like this:
+      <stroke
+          android:width="5px"
+          android:color="#0000ff"
+          android:dashGap="3dp"
+          android:dashWidth="3dp" />
+
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Normal state -->
+    <item android:state_pressed="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/transparant" />
+            <!-- overridden with size on layout  -->
+            <size android:width="100dp" android:height="100dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/DimGray" />
+        </shape>
+    </item>
+    <!-- Pressed state -->
+    <item android:state_pressed="true" >
+        <shape android:shape="oval">
+            <solid android:color="@color/light_grey" />
+            <!-- overridden with size on layout  -->
+            <size android:width="100dp" android:height="100dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/DimGray" />
+        </shape>
+    </item>
+</selector>

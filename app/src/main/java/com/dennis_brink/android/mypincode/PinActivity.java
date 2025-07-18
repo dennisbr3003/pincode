@@ -60,7 +60,9 @@ public class PinActivity extends AppCompatActivity {
         imgBtn5 = findViewById(R.id.imageButtonPin5);
 
         btn1 = findViewById(R.id.btn1);
-        btn1.setOnClickListener(view -> processClick(view));
+        btn1.setOnClickListener(view -> {
+            processClick(view);
+        });
         btn2 = findViewById(R.id.btn2);
         btn2.setOnClickListener(view -> processClick(view));
         btn3 = findViewById(R.id.btn3);
@@ -272,10 +274,9 @@ public class PinActivity extends AppCompatActivity {
                         txtHint.setVisibility(View.VISIBLE);
                         txtHint.setTextColor(getColor(R.color.OrangeRed));
                         txtHint.setText(R.string._pin_incorrect);
-
+                        Log.d(TAG, "User pincode does not match saved pincode --> access denied");
                         resetPin();
 
-                        return;
                     }
                 }catch(Exception e){
                     Log.d(TAG, "Error " + e.getLocalizedMessage());
